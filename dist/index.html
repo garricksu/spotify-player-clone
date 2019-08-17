@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Elevate Music Player</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="container">
+        <div class="track-bar">
+          <div class="track-bar-fill"></div>
+        </div>
+        <div class="player">
+          <div class="player-header">
+            <div class="player-thumbnail">
+              <img
+                src="https://i1.sndcdn.com/artworks-000548207034-qcuzot-t500x500.jpg"
+                alt="ncs-elevate"
+                class="player-img"
+              />
+            </div>
+            <div class="player-details">
+              <h1 class="player-name">NCS: Elevate</h1>
+              <div class="player-count-wrapper">
+                <span class="player-count"></span> songs
+              </div>
+              <p class="player-copyright">Songs provided by NoCopyrightSounds</p>
+              <button class="button button-green player-trigger">Play</button>
+            </div>
+          </div>
+          <div class="player-body">
+            <ul class="playlist"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>

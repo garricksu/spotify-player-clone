@@ -1,0 +1,158 @@
+@import 'config';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main-stack;
+}
+
+.button {
+  padding: 1rem 3.8rem;
+  border-radius: 3.4rem;
+  text-transform: uppercase;
+  border: 0;
+  outline: 0;
+  opacity: .9;
+  transition: 0.1s all ease;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  &-green {
+    background: $light-green;
+    color: $main-font-color;
+  }
+}
+
+.app {
+  background: linear-gradient(to bottom, #7d182f, #100206);
+  height: 100%;
+}
+
+// trackbar
+.track-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+ 
+
+  &-fill {
+    height: 6px;
+    width: 0%;
+    background: $light-green;
+    transition: width .1s ease;
+  }
+}
+
+// player
+.player {
+  display: flex;
+  height: 100vh;
+
+  // player header
+  &-header {
+    flex: 1;
+    padding: 1.4rem;
+  }
+
+  &-img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &-details {
+    text-align: center;
+  }
+
+  &-name {
+    color: $main-font-color;
+  }
+
+  &-copyright {
+    color: $secondary-font-color;
+    font-size: .6rem;
+  }
+
+  &-count-wrapper {
+    color: $secondary-font-color;
+    text-transform: uppercase;
+  }
+
+  &-trigger {
+    margin: 1.4rem 0;
+  }
+
+  // player body
+  &-body {
+    flex: 2;
+    padding: 1.4rem 0;
+
+    .playlist {
+      list-style: none;
+      height: 100%;
+      overflow: scroll;
+      overflow-x: hidden;
+
+      &-song {
+        display: flex;
+        padding: 0.78rem 1rem;
+        transition: 0.3s all ease;
+
+        &-name {
+          color: $main-font-color;
+        }
+
+        &-artist {
+          color: $secondary-font-color;
+        }
+
+        &-duration {
+          margin-left: auto;
+          color: $main-font-color;
+        }
+
+        &:hover {
+          background: rgba(0, 0 ,0 , 0.3);
+        }
+
+        &.active {
+          color: $light-green;
+          background: rgba(0, 0, 0, 0.3);
+
+          div {
+            color: inherit;
+          }
+        }
+
+        .play-pause {
+          color: $main-font-color;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+ 
+
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .app {
+    overflow: auto;
+  }
+  .player {
+    display: block;
+  }
+}
